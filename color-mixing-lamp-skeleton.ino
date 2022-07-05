@@ -108,7 +108,7 @@ void loop() {
 
 // function that checks if the red sensor is being covered
 bool redActive(int redVal) {
-  int redThreshold = 100; // change the value from 750 to "red covered" + 20
+  int redThreshold = 100; // change the value from 100 to "red covered" + 20
   if (redVal < redThreshold)
     return true;
   return false;
@@ -124,7 +124,7 @@ bool greenActive(int greenVal) {
 
 // function that checks if the blue sensor is being covered
 bool blueActive(int blueVal) {
-  int blueThreshold = 400; // change the value from 750 to "blue covered" + 20
+  int blueThreshold = 400; // change the value from 400 to "blue covered" + 20
   if (blueVal < blueThreshold)
     return true;
   return false;
