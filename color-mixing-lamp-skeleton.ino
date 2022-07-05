@@ -17,12 +17,12 @@ void setup() {
   // put your setup code here, to run once:
   // set up the LEDS as output and the sensors as input; remember to use your constants
   pinMode(REDLEDPIN, OUTPUT);
-  [add code here] // set up LED as input
-  [add code here] // set up LED as input
+  [add code here] // set up LED as output
+  [add code here] // set up LED as output
 
-  [add code here] // set up sensor as output
-  [add code here] // set up sensor as output
-  [add code here] // set up sensor as output
+  [add code here] // set up sensor as input
+  [add code here] // set up sensor as input
+  [add code here] // set up sensor as input
 
   Serial.begin(9600);
 }
@@ -108,7 +108,7 @@ void loop() {
 
 // function that checks if the red sensor is being covered
 bool redActive(int redVal) {
-  int redThreshold = 100;
+  int redThreshold = 100; // change the value from 750 to "red covered" + 20
   if (redVal < redThreshold)
     return true;
   return false;
@@ -116,7 +116,7 @@ bool redActive(int redVal) {
 
 // function that checks if the green sensor is being covered
 bool greenActive(int greenVal) {
-  int greenThreshold = 750;
+  int greenThreshold = 750; // change the value from 750 to "green covered" + 20
   if (greenVal < greenThreshold)
     return true;
   return false;
@@ -124,7 +124,7 @@ bool greenActive(int greenVal) {
 
 // function that checks if the blue sensor is being covered
 bool blueActive(int blueVal) {
-  int blueThreshold = 400;
+  int blueThreshold = 400; // change the value from 750 to "blue covered" + 20
   if (blueVal < blueThreshold)
     return true;
   return false;
